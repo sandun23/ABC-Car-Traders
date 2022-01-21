@@ -19,8 +19,7 @@ namespace ABC_Car_Traders
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            lbLoginEmail.Text = "Hello";
-            lbLoginEmail.ForeColor = Color.Red;
+           // Load(Dashboard);
         }
 
     }
