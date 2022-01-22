@@ -11,6 +11,7 @@
   <ItemGroup>
     <Folder Include="controller\" />
     <Folder Include="model\" />
+    <Folder Include="view\Customer Dashboard Views\" />
   </ItemGroup>
 
   <ItemGroup>

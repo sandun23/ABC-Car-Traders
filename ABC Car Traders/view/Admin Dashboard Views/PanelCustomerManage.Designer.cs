@@ -1,7 +1,7 @@
 ﻿
-namespace ABC_Car_Traders.view
+namespace ABC_Car_Traders.view.Admin_Dashboard_Views
 {
-    partial class PanelDashboard
+    partial class PanelCustomerManage
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,19 @@ namespace ABC_Car_Traders.view
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // PanelCustomerManage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "PanelDashboard";
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.ClientSize = new System.Drawing.Size(733, 477);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "PanelCustomerManage";
+            this.Text = "PanelCustomerManage";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

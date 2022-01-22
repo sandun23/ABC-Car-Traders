@@ -6,10 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using ABC_Car_Traders.view;
 
 namespace ABC_Car_Traders
 {
-    public partial class Dashboard : Form
+    public partial class AdminDashboard : Form
     {
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -26,11 +27,17 @@ namespace ABC_Car_Traders
 
 
 
-        public Dashboard()
+        public AdminDashboard()
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            lblTitle.Text = "Dashboard";
+            this.PnlFormLoader.Controls.Clear();
+            PanelDashboard PanelDashboard_vrb = new PanelDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            PanelDashboard_vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(PanelDashboard_vrb);
+            PanelDashboard_vrb.Show();
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -44,6 +51,13 @@ namespace ABC_Car_Traders
             pnlNav.Top = btnDashboard.Top;
             pnlNav.Left = btnDashboard.Left;
             btnDashboard.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Dashboard";
+            this.PnlFormLoader.Controls.Clear();
+            PanelDashboard PanelDashboard_vrb = new PanelDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            PanelDashboard_vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(PanelDashboard_vrb);
+            PanelDashboard_vrb.Show();
         }
 
         private void btnCarManage_Click(object sender, EventArgs e)
@@ -52,6 +66,13 @@ namespace ABC_Car_Traders
             pnlNav.Top = btnCarManage.Top;
             pnlNav.Left = btnCarManage.Left;
             btnCarManage.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Car Manage";
+            this.PnlFormLoader.Controls.Clear();
+            PanelCarManage PanelCarManage_vrb = new PanelCarManage() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            PanelCarManage_vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(PanelCarManage_vrb);
+            PanelCarManage_vrb.Show();
         }
 
         private void btnPartManage_Click(object sender, EventArgs e)
@@ -60,6 +81,13 @@ namespace ABC_Car_Traders
             pnlNav.Top = btnPartManage.Top;
             pnlNav.Left = btnPartManage.Left;
             btnPartManage.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Spare Part Manage";
+            this.PnlFormLoader.Controls.Clear();
+            PanelCarPartManage PanelCarPartManage_vrb = new PanelCarPartManage() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            PanelCarPartManage_vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(PanelCarPartManage_vrb);
+            PanelCarPartManage_vrb.Show();
         }
 
         private void btnOrderManage_Click(object sender, EventArgs e)
@@ -68,7 +96,8 @@ namespace ABC_Car_Traders
             pnlNav.Top = btnOrderManage.Top;
             pnlNav.Left = btnOrderManage.Left;
             btnOrderManage.BackColor = Color.FromArgb(46, 51, 73);
-        }
+
+//AddingNewEventArgs btn partsssssssssssssssssssssssssssssssssssssssss
 
         private void btnCustomerManage_Click(object sender, EventArgs e)
         {

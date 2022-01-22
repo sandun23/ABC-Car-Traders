@@ -1,7 +1,7 @@
 ﻿
 namespace ABC_Car_Traders
 {
-    partial class Dashboard
+    partial class AdminDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ABC_Car_Traders
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -42,6 +42,9 @@ namespace ABC_Car_Traders
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblusername = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.BtnClose = new System.Windows.Forms.Button();
+            this.PnlFormLoader = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -228,12 +231,49 @@ namespace ABC_Car_Traders
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblTitle.Location = new System.Drawing.Point(209, 22);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(66, 29);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "Title";
+            // 
+            // BtnClose
+            // 
+            this.BtnClose.BackColor = System.Drawing.Color.Transparent;
+            this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnClose.FlatAppearance.BorderSize = 0;
+            this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnClose.ForeColor = System.Drawing.Color.Red;
+            this.BtnClose.Location = new System.Drawing.Point(912, 12);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(27, 30);
+            this.BtnClose.TabIndex = 2;
+            this.BtnClose.Text = "X";
+            this.BtnClose.UseVisualStyleBackColor = false;
+            // 
+            // PnlFormLoader
+            // 
+            this.PnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PnlFormLoader.Location = new System.Drawing.Point(186, 100);
+            this.PnlFormLoader.Name = "PnlFormLoader";
+            this.PnlFormLoader.Size = new System.Drawing.Size(765, 477);
+            this.PnlFormLoader.TabIndex = 3;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.PnlFormLoader);
+            this.Controls.Add(this.BtnClose);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
@@ -245,6 +285,7 @@ namespace ABC_Car_Traders
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -262,5 +303,8 @@ namespace ABC_Car_Traders
         private System.Windows.Forms.Button btnCarManage;
         private System.Windows.Forms.Button btnUserManage;
         private System.Windows.Forms.Panel pnlNav;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button BtnClose;
+        private System.Windows.Forms.Panel PnlFormLoader;
     }
 }
