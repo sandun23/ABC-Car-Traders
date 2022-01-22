@@ -96,7 +96,7 @@ namespace ABC_Car_Traders
             pnlNav.Top = btnOrderManage.Top;
             pnlNav.Left = btnOrderManage.Left;
             btnOrderManage.BackColor = Color.FromArgb(46, 51, 73);
-
+        }
 //AddingNewEventArgs btn partsssssssssssssssssssssssssssssssssssssssss
 
         private void btnCustomerManage_Click(object sender, EventArgs e)
