@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace ABC_Car_Traders
 {
-    public partial class logn : Form
+    public partial class login : Form
     {
-        public logn()
+        public login()
         {
             InitializeComponent();
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            lbLoginEmail.Text = "Hello";
-            lbLoginEmail.ForeColor = Color.Red;
+           // Load(Dashboard);
         }
 
     }
