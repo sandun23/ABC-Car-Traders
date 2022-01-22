@@ -5,12 +5,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>ABC_Car_Traders</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="controller\" />
     <Folder Include="model\" />
-    <Folder Include="view\" />
   </ItemGroup>
 
   <ItemGroup>

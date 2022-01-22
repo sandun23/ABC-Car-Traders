@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ABC_Car_Traders
 {
-    public partial class logn : Form
+    public partial class login : Form
     {
-        public logn()
+        public login()
         {
             InitializeComponent();
         }
