@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ABC_Car_Traders.view;
+using ABC_Car_Traders.view.Admin_Dashboard_Views;
 
 namespace ABC_Car_Traders
 {
@@ -96,6 +97,13 @@ namespace ABC_Car_Traders
             pnlNav.Top = btnOrderManage.Top;
             pnlNav.Left = btnOrderManage.Left;
             btnOrderManage.BackColor = Color.FromArgb(46, 51, 73);
+
+            lblTitle.Text = "Order Manage";
+            this.PnlFormLoader.Controls.Clear();
+            PanelOrderManage PanelOrderManage_vrb = new PanelOrderManage() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            PanelOrderManage_vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(PanelOrderManage_vrb);
+            PanelOrderManage_vrb.Show();
         }
 //AddingNewEventArgs btn partsssssssssssssssssssssssssssssssssssssssss
 
@@ -105,6 +113,14 @@ namespace ABC_Car_Traders
             pnlNav.Top = btnCustomerManage.Top;
             pnlNav.Left = btnCustomerManage.Left;
             btnCustomerManage.BackColor = Color.FromArgb(46, 51, 73);
+
+
+            lblTitle.Text = "Customer Manage";
+            this.PnlFormLoader.Controls.Clear();
+            PanelCustomerManage PanelCustomerManage_vrb = new PanelCustomerManage() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            PanelCustomerManage_vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(PanelCustomerManage_vrb);
+            PanelCustomerManage_vrb.Show();
         }
 
         private void btnUserManage_Click(object sender, EventArgs e)
@@ -113,6 +129,14 @@ namespace ABC_Car_Traders
             pnlNav.Top = btnUserManage.Top;
             pnlNav.Left = btnUserManage.Left;
             btnUserManage.BackColor = Color.FromArgb(46, 51, 73);
+
+
+            lblTitle.Text = "User Manage";
+            this.PnlFormLoader.Controls.Clear();
+            PanelUserManage PanelUserManage_vrb = new PanelUserManage() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            PanelUserManage_vrb.FormBorderStyle = FormBorderStyle.None;
+            this.PnlFormLoader.Controls.Add(PanelUserManage_vrb);
+            PanelUserManage_vrb.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -121,6 +145,11 @@ namespace ABC_Car_Traders
             pnlNav.Top = btnLogout.Top;
             pnlNav.Left = btnLogout.Left;
             btnLogout.BackColor = Color.FromArgb(46, 51, 73);
+
+            this.Hide();
+            var login = new login();
+            login.Closed += (s, args) => this.Close();
+            login.Show();
         }
 
         private void btnDashboard_Leave(object sender, EventArgs e)
