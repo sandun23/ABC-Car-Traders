@@ -14,5 +14,7 @@ namespace ABC_Car_Traders.view
         {
             InitializeComponent();
         }
+
+       
     }
 }

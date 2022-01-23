@@ -66,7 +66,7 @@ namespace ABC_Car_Traders
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(186, 577);
+            this.panel1.Size = new System.Drawing.Size(186, 650);
             this.panel1.TabIndex = 0;
             // 
             // pnlNav
@@ -86,7 +86,7 @@ namespace ABC_Car_Traders
             this.btnLogout.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnLogout.Location = new System.Drawing.Point(0, 535);
+            this.btnLogout.Location = new System.Drawing.Point(0, 608);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(186, 42);
             this.btnLogout.TabIndex = 1;
@@ -260,23 +260,23 @@ namespace ABC_Car_Traders
             // PnlFormLoader
             // 
             this.PnlFormLoader.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnlFormLoader.Location = new System.Drawing.Point(186, 100);
+            this.PnlFormLoader.Location = new System.Drawing.Point(186, 70);
             this.PnlFormLoader.Name = "PnlFormLoader";
-            this.PnlFormLoader.Size = new System.Drawing.Size(765, 477);
+            this.PnlFormLoader.Size = new System.Drawing.Size(891, 580);
             this.PnlFormLoader.TabIndex = 3;
             // 
-            // Dashboard
+            // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(951, 577);
+            this.ClientSize = new System.Drawing.Size(1077, 650);
             this.Controls.Add(this.PnlFormLoader);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Dashboard";
+            this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
