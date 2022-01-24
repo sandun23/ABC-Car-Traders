@@ -14,11 +14,11 @@ namespace ABC_Car_Traders.view
     {
 
         CarRepoImpl carRepoImpl = new CarRepoImpl();
-        private readonly CarRepoImpl carRepository = new CarRepoImpl();
+        //private readonly CarRepoImpl carRepository = new CarRepoImpl();
         public PanelCarManage()
         {
             InitializeComponent();
-            List<Car> cars = carRepository.GetAllCars();
+            List<Car> cars = carRepoImpl.GetAllCars();
             tblCarDetails.DataSource = cars;
         }
 
@@ -46,6 +46,7 @@ namespace ABC_Car_Traders.view
             if (v)
             {
                 MessageBox.Show("Done", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CleanTexts();
 
             }
             else
@@ -62,13 +63,13 @@ namespace ABC_Car_Traders.view
         private void GetAllCars(object sender, EventArgs e)
         {
             txtCarSearch.Text = "";
-            List<Car> cars = carRepository.GetAllCars();
+            List<Car> cars = carRepoImpl.GetAllCars();
             tblCarDetails.DataSource = cars;
         }
 
         private void SearchCartKeyUp(object sender, KeyEventArgs e)
         {
-            List<Car> cars = carRepository.FilterCarList(txtCarSearch.Text);
+            List<Car> cars = carRepoImpl.FilterCarList(txtCarSearch.Text);
             tblCarDetails.DataSource = cars;
         }
     }
