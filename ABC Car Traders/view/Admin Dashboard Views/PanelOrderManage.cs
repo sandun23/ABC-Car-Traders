@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ABC_Car_Traders.view
+namespace ABC_Car_Traders.view.Admin_Dashboard_Views
 {
-    public partial class PanelDashboard : Form
+    public partial class PanelOrderManage : Form
     {
-        public PanelDashboard()
+        public PanelOrderManage()
         {
             InitializeComponent();
         }

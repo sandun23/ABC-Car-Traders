@@ -17,7 +17,7 @@ namespace ABC_Car_Traders
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashboard());
+            Application.Run(new AdminDashboard());
         }
     }
 }

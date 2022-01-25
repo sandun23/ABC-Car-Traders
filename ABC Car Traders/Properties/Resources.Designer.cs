@@ -63,9 +63,49 @@ namespace ABC_Car_Traders.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap customer_128px {
+            get {
+                object obj = ResourceManager.GetObject("customer_128px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap data_pending_240px {
+            get {
+                object obj = ResourceManager.GetObject("data_pending_240px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap list_128px {
+            get {
+                object obj = ResourceManager.GetObject("list_128px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Red_and_Black_Modern_Car_Auto_Services_Logo__2_ {
             get {
                 object obj = ResourceManager.GetObject("Red and Black Modern Car Auto Services Logo (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_50px {
+            get {
+                object obj = ResourceManager.GetObject("search_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
