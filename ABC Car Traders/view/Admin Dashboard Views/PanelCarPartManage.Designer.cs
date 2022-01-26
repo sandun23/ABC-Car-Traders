@@ -47,8 +47,9 @@ namespace ABC_Car_Traders.view
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tblSparePart = new System.Windows.Forms.DataGridView();
             this.txtSearchSparePart = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -79,6 +80,7 @@ namespace ABC_Car_Traders.view
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.txtSparePartBrandName);
+            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
@@ -282,6 +284,18 @@ namespace ABC_Car_Traders.view
             this.txtSearchSparePart.TextChanged += new System.EventHandler(this.txtSearchSparePart_TextChanged);
             this.txtSearchSparePart.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SearchSpareParttKeyUp);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(18, 20);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(188, 20);
+            this.label5.TabIndex = 51;
+            this.label5.Text = "View Spare Part Details";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -294,17 +308,17 @@ namespace ABC_Car_Traders.view
             this.label4.TabIndex = 51;
             this.label4.Text = "Spare Part";
             // 
-            // label5
+            // label6
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(18, 20);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(188, 20);
-            this.label5.TabIndex = 51;
-            this.label5.Text = "View Spare Part Details";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(136, 52);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 20);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Model";
             // 
             // PanelCarPartManage
             // 
@@ -348,5 +362,6 @@ namespace ABC_Car_Traders.view
         private System.Windows.Forms.TextBox txtSearchSparePart;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

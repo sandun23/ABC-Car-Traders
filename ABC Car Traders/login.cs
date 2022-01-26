@@ -19,8 +19,42 @@ namespace ABC_Car_Traders
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-           // Load(Dashboard);
+            string userRole = cmbLoginUserRole.Text;
+
+            string email = txtLoginEmail.Text;
+            string password = txtLoginPassword.Text;
+
+            if (userRole == "Admin")
+            {
+                this.Hide();
+                var adminDashboard = new AdminDashboard();
+                adminDashboard.Closed += (s, args) => this.Close();
+                adminDashboard.Show();
+            }
+            else if(userRole == "Customer")
+            {
+                this.Hide();
+                var customerDashboard = new CustomerDashboard();
+                customerDashboard.Closed += (s, args) => this.Close();
+                customerDashboard.Show();
+            }
+            
+
+
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var customerRegistration = new CustomerRegistration();
+            customerRegistration.Closed += (s, args) => this.Close();
+            customerRegistration.Show();
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+           // MessageBox.Show("Are You Sure",s)
+            this.Close();
+        }
     }
 }
