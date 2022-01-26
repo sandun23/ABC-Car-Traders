@@ -69,6 +69,7 @@ namespace ABC_Car_Traders
             this.txtCustomerPassword.Location = new System.Drawing.Point(29, 407);
             this.txtCustomerPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCustomerPassword.Name = "txtCustomerPassword";
+            this.txtCustomerPassword.PasswordChar = '*';
             this.txtCustomerPassword.Size = new System.Drawing.Size(288, 27);
             this.txtCustomerPassword.TabIndex = 41;
             // 
@@ -226,6 +227,7 @@ namespace ABC_Car_Traders
             this.txtCustomerPasswordCon.Location = new System.Drawing.Point(391, 407);
             this.txtCustomerPasswordCon.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCustomerPasswordCon.Name = "txtCustomerPasswordCon";
+            this.txtCustomerPasswordCon.PasswordChar = '*';
             this.txtCustomerPasswordCon.Size = new System.Drawing.Size(288, 27);
             this.txtCustomerPasswordCon.TabIndex = 41;
             // 
@@ -237,6 +239,7 @@ namespace ABC_Car_Traders
             this.txtCustomerSave.TabIndex = 44;
             this.txtCustomerSave.Text = "Save";
             this.txtCustomerSave.UseVisualStyleBackColor = true;
+            this.txtCustomerSave.Click += new System.EventHandler(this.txtCustomerSave_Click);
             // 
             // txtCustomerCancel
             // 

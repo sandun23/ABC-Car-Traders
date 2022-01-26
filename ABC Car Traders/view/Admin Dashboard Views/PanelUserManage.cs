@@ -23,13 +23,13 @@ namespace ABC_Car_Traders.view.Admin_Dashboard_Views
         {
             if (txtUserPassword.Text == "" || txtUserConPassword.Text == "" || txtUserEmail.Text =="" || txtUserName.Text == "" )
             {
-                MessageBox.Show("Please enter values");
+                MessageBox.Show("Please enter values" ,"Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtUserName.Focus();
                 return;
             }
             else if (txtUserPassword.Text != txtUserConPassword.Text)
             {
-                MessageBox.Show("Password not matching");
+                MessageBox.Show("Password not matching", "Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 txtUserConPassword.Focus();
                 return;
             }

@@ -33,13 +33,14 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.txtCustomerCarSearch = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.btnCustomerCarRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tblCustomerCarDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // tblCustomerCarDetails
             // 
             this.tblCustomerCarDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblCustomerCarDetails.Location = new System.Drawing.Point(12, 116);
+            this.tblCustomerCarDetails.Location = new System.Drawing.Point(13, 116);
             this.tblCustomerCarDetails.Name = "tblCustomerCarDetails";
             this.tblCustomerCarDetails.RowHeadersWidth = 51;
             this.tblCustomerCarDetails.RowTemplate.Height = 29;
@@ -52,18 +53,19 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.txtCustomerCarSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCustomerCarSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCustomerCarSearch.ForeColor = System.Drawing.Color.White;
-            this.txtCustomerCarSearch.Location = new System.Drawing.Point(480, 69);
+            this.txtCustomerCarSearch.Location = new System.Drawing.Point(481, 69);
             this.txtCustomerCarSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCustomerCarSearch.Name = "txtCustomerCarSearch";
             this.txtCustomerCarSearch.Size = new System.Drawing.Size(373, 27);
             this.txtCustomerCarSearch.TabIndex = 32;
+            this.txtCustomerCarSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchCartKeyUp);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(12, 20);
+            this.label14.Location = new System.Drawing.Point(13, 20);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(135, 20);
@@ -76,7 +78,7 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label15.Location = new System.Drawing.Point(817, 46);
+            this.label15.Location = new System.Drawing.Point(818, 46);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -85,12 +87,23 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.label15.Text = "Car";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // btnCustomerCarRefresh
+            // 
+            this.btnCustomerCarRefresh.Location = new System.Drawing.Point(357, 69);
+            this.btnCustomerCarRefresh.Name = "btnCustomerCarRefresh";
+            this.btnCustomerCarRefresh.Size = new System.Drawing.Size(94, 29);
+            this.btnCustomerCarRefresh.TabIndex = 34;
+            this.btnCustomerCarRefresh.Text = "Refresh";
+            this.btnCustomerCarRefresh.UseVisualStyleBackColor = true;
+            this.btnCustomerCarRefresh.Click += new System.EventHandler(this.btnCustomerCarRefresh_Click);
+            // 
             // PanelCustomerCarDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(891, 580);
+            this.Controls.Add(this.btnCustomerCarRefresh);
             this.Controls.Add(this.tblCustomerCarDetails);
             this.Controls.Add(this.txtCustomerCarSearch);
             this.Controls.Add(this.label14);
@@ -110,5 +123,6 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
         private System.Windows.Forms.TextBox txtCustomerCarSearch;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnCustomerCarRefresh;
     }
 }
