@@ -10,6 +10,9 @@ namespace ABC_Car_Traders.Repo.impl
     class CustomerRepoImpl : ICustomerRepo
     {
         MySqlCommand command;
+
+        //This function use to save customer details to Database
+
         public bool AddCustomer(Customer customer)
         {
             bool isSuccess;
@@ -30,6 +33,8 @@ namespace ABC_Car_Traders.Repo.impl
             }
             return isSuccess;
         }
+
+        //This function use to log customers to the system
 
         public int CustomerLogin(string email, string password)
         {
@@ -77,6 +82,8 @@ namespace ABC_Car_Traders.Repo.impl
             return result;
         }
 
+        //This function use to filter customer list
+
         public List<Customer> FilterCustomerList(string filterString)
         {
             List<Customer> customerList = new List<Customer>();
@@ -92,6 +99,9 @@ namespace ABC_Car_Traders.Repo.impl
             dbConnection.CloseConnection();
             return customerList;
         }
+
+
+        //This function use to get allcustomers
 
         public List<Customer> GetAllCustomers()
         {

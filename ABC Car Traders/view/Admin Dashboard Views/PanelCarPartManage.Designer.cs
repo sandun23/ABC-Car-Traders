@@ -41,6 +41,7 @@ namespace ABC_Car_Traders.view
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtSparePartBrandName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@ namespace ABC_Car_Traders.view
             this.txtSearchSparePart = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -107,7 +107,7 @@ namespace ABC_Car_Traders.view
             this.txtSparePartName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSparePartName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSparePartName.ForeColor = System.Drawing.Color.White;
-            this.txtSparePartName.Location = new System.Drawing.Point(132, 154);
+            this.txtSparePartName.Location = new System.Drawing.Point(131, 176);
             this.txtSparePartName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSparePartName.Name = "txtSparePartName";
             this.txtSparePartName.Size = new System.Drawing.Size(648, 27);
@@ -119,7 +119,7 @@ namespace ABC_Car_Traders.view
             this.txtSparePartPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSparePartPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSparePartPrice.ForeColor = System.Drawing.Color.White;
-            this.txtSparePartPrice.Location = new System.Drawing.Point(496, 369);
+            this.txtSparePartPrice.Location = new System.Drawing.Point(495, 391);
             this.txtSparePartPrice.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSparePartPrice.Name = "txtSparePartPrice";
             this.txtSparePartPrice.Size = new System.Drawing.Size(290, 27);
@@ -131,7 +131,7 @@ namespace ABC_Car_Traders.view
             this.txtSparePartQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSparePartQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSparePartQty.ForeColor = System.Drawing.Color.White;
-            this.txtSparePartQty.Location = new System.Drawing.Point(134, 369);
+            this.txtSparePartQty.Location = new System.Drawing.Point(133, 391);
             this.txtSparePartQty.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSparePartQty.Name = "txtSparePartQty";
             this.txtSparePartQty.Size = new System.Drawing.Size(290, 27);
@@ -143,7 +143,7 @@ namespace ABC_Car_Traders.view
             this.txtSparePartDesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSparePartDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSparePartDesc.ForeColor = System.Drawing.Color.White;
-            this.txtSparePartDesc.Location = new System.Drawing.Point(136, 232);
+            this.txtSparePartDesc.Location = new System.Drawing.Point(135, 254);
             this.txtSparePartDesc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSparePartDesc.Multiline = true;
             this.txtSparePartDesc.Name = "txtSparePartDesc";
@@ -156,7 +156,7 @@ namespace ABC_Car_Traders.view
             this.txtSparePartModel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSparePartModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSparePartModel.ForeColor = System.Drawing.Color.White;
-            this.txtSparePartModel.Location = new System.Drawing.Point(492, 77);
+            this.txtSparePartModel.Location = new System.Drawing.Point(491, 99);
             this.txtSparePartModel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSparePartModel.Name = "txtSparePartModel";
             this.txtSparePartModel.Size = new System.Drawing.Size(288, 27);
@@ -165,36 +165,36 @@ namespace ABC_Car_Traders.view
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(498, 344);
+            this.label11.Location = new System.Drawing.Point(497, 366);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(48, 20);
+            this.label11.Size = new System.Drawing.Size(50, 21);
             this.label11.TabIndex = 37;
             this.label11.Text = "Price";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(136, 344);
+            this.label10.Location = new System.Drawing.Point(135, 366);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 20);
+            this.label10.Size = new System.Drawing.Size(44, 21);
             this.label10.TabIndex = 36;
             this.label10.Text = "QTY";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(134, 209);
+            this.label9.Location = new System.Drawing.Point(133, 231);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 20);
+            this.label9.Size = new System.Drawing.Size(103, 21);
             this.label9.TabIndex = 34;
             this.label9.Text = "Description";
             // 
@@ -204,45 +204,57 @@ namespace ABC_Car_Traders.view
             this.txtSparePartBrandName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSparePartBrandName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSparePartBrandName.ForeColor = System.Drawing.Color.White;
-            this.txtSparePartBrandName.Location = new System.Drawing.Point(136, 77);
+            this.txtSparePartBrandName.Location = new System.Drawing.Point(135, 99);
             this.txtSparePartBrandName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSparePartBrandName.Name = "txtSparePartBrandName";
             this.txtSparePartBrandName.Size = new System.Drawing.Size(288, 27);
             this.txtSparePartBrandName.TabIndex = 50;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(135, 74);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 21);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Brand";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(498, 52);
+            this.label3.Location = new System.Drawing.Point(497, 74);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.Size = new System.Drawing.Size(64, 21);
             this.label3.TabIndex = 31;
             this.label3.Text = "Model";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(134, 129);
+            this.label2.Location = new System.Drawing.Point(133, 151);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 20);
+            this.label2.Size = new System.Drawing.Size(153, 21);
             this.label2.TabIndex = 40;
             this.label2.Text = "Spare Part Name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(9, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 20);
+            this.label1.Size = new System.Drawing.Size(144, 21);
             this.label1.TabIndex = 41;
             this.label1.Text = "Add Spare Part ";
             // 
@@ -287,38 +299,26 @@ namespace ABC_Car_Traders.view
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(18, 20);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(188, 20);
+            this.label5.Size = new System.Drawing.Size(204, 21);
             this.label5.TabIndex = 51;
             this.label5.Text = "View Spare Part Details";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(781, 20);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 20);
+            this.label4.Size = new System.Drawing.Size(97, 21);
             this.label4.TabIndex = 51;
             this.label4.Text = "Spare Part";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(136, 52);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 20);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Model";
             // 
             // PanelCarPartManage
             // 

@@ -70,24 +70,24 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(27, 60);
+            this.label2.Location = new System.Drawing.Point(18, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 31);
+            this.label2.Size = new System.Drawing.Size(181, 34);
             this.label2.TabIndex = 0;
             this.label2.Text = "Order Status";
             // 
             // lblDashThisMonthOrders
             // 
             this.lblDashThisMonthOrders.AutoSize = true;
-            this.lblDashThisMonthOrders.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDashThisMonthOrders.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblDashThisMonthOrders.ForeColor = System.Drawing.Color.LightGray;
             this.lblDashThisMonthOrders.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblDashThisMonthOrders.Location = new System.Drawing.Point(27, 107);
+            this.lblDashThisMonthOrders.Location = new System.Drawing.Point(36, 105);
             this.lblDashThisMonthOrders.Name = "lblDashThisMonthOrders";
-            this.lblDashThisMonthOrders.Size = new System.Drawing.Size(134, 41);
+            this.lblDashThisMonthOrders.Size = new System.Drawing.Size(129, 34);
             this.lblDashThisMonthOrders.TabIndex = 0;
             this.lblDashThisMonthOrders.Text = "Pending";
             // 

@@ -38,35 +38,46 @@ namespace ABC_Car_Traders.view
             txtQty.Text = "";
         }
 
+        //This function use to save car details
         private void btnCarSave_Click(object sender, EventArgs e)
         {
-            Car car = new Car(0, txtBrandName.Text, txtEdition.Text, txtModel.Text, txtModel.Text, cmbFuelType.Text, txtBodyType.Text, txtEngineCap.Text, txtColour.Text, txtManYear.Text, txtDesc.Text, Convert.ToDouble(txtPrice.Text), Convert.ToInt32(txtQty.Text));
-            bool v = carRepoImpl.AddCar(car);
-
-            if (v)
+            if (txtBodyType.Text == "" || txtBrandName.Text == "" || txtEdition.Text == "" || txtModel.Text == "" || txtModel.Text == "" ||  cmbFuelType.Text == "" || txtEngineCap.Text == "" || txtColour.Text == "" || txtManYear.Text == "" || txtDesc.Text == "" || txtPrice.Text == "" || txtQty.Text == "" )
             {
-                MessageBox.Show("Done", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CleanTexts();
+                MessageBox.Show("Please Fill All the Blanks", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
             {
-                MessageBox.Show("Error", "asdasd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Car car = new Car(0, txtBrandName.Text, txtEdition.Text, txtModel.Text, txtModel.Text, cmbFuelType.Text, txtBodyType.Text, txtEngineCap.Text, txtColour.Text, txtManYear.Text, txtDesc.Text, Convert.ToDouble(txtPrice.Text), Convert.ToInt32(txtQty.Text));
+                bool v = carRepoImpl.AddCar(car);
+
+                if (v)
+                {
+                    MessageBox.Show("Done", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CleanTexts();
+
+                }
+                else
+                {
+                    MessageBox.Show("Error", "asdasd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+           
         }
 
-       
-
-       
 
 
-            private void GetAllCars(object sender, EventArgs e)
+
+
+        //This function use to get all car details 
+        private void GetAllCars(object sender, EventArgs e)
             {
                 txtCarSearch.Text = "";
                 List<Car> cars = carRepoImpl.GetAllCars();
                 tblCarDetails.DataSource = cars;
             }
 
+        //This function use to search car details
         private void SearchCartKeyUp(object sender, KeyEventArgs e)
         {
             List<Car> cars = carRepoImpl.FilterCarList(txtCarSearch.Text);

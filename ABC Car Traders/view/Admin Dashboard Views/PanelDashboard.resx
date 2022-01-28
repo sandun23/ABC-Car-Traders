@@ -349,7 +349,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblDashPendingOrders.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 138</value>
+    <value>63, 138</value>
   </data>
   <data name="lblDashPendingOrders.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 41</value>

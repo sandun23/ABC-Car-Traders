@@ -22,6 +22,7 @@ namespace ABC_Car_Traders.view
             tblSparePart.DataSource = spareParts;
         }
 
+        //This function use to save car parts 
         private void btnCarPartSave_Click(object sender, EventArgs e)
         {
             SparePart sparePart = new SparePart(0, txtSparePartBrandName.Text, txtSparePartName.Text, txtSparePartModel.Text, Convert.ToDouble(txtSparePartPrice.Text), Convert.ToInt32(txtSparePartQty.Text), txtSparePartDesc.Text);
@@ -29,7 +30,7 @@ namespace ABC_Car_Traders.view
 
             if (v)
             {
-                MessageBox.Show("Done", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Successfully Updated", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CleanTexts();
             }
             else
@@ -37,6 +38,8 @@ namespace ABC_Car_Traders.view
                 MessageBox.Show("Error", "Unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        //This function use to get all spare parts to table in frontend
 
         private void GetAllSpareParts(object sender, EventArgs e)
         {
@@ -51,7 +54,7 @@ namespace ABC_Car_Traders.view
             tblSparePart.DataSource = spareParts;
         }
 
-
+        //This function use to clean after save done.
         private void CleanTexts()
         {
             txtSparePartBrandName.Text = "";

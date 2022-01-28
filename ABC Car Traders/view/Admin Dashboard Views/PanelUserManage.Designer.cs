@@ -52,7 +52,7 @@ namespace ABC_Car_Traders.view.Admin_Dashboard_Views
             this.txtUserEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUserEmail.ForeColor = System.Drawing.Color.White;
-            this.txtUserEmail.Location = new System.Drawing.Point(61, 114);
+            this.txtUserEmail.Location = new System.Drawing.Point(48, 158);
             this.txtUserEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUserEmail.Name = "txtUserEmail";
             this.txtUserEmail.Size = new System.Drawing.Size(373, 27);
@@ -61,36 +61,36 @@ namespace ABC_Car_Traders.view.Admin_Dashboard_Views
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(61, 91);
+            this.label6.Location = new System.Drawing.Point(48, 135);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
+            this.label6.Size = new System.Drawing.Size(52, 21);
             this.label6.TabIndex = 51;
             this.label6.Text = "Email";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(13, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 20);
+            this.label1.Size = new System.Drawing.Size(166, 21);
             this.label1.TabIndex = 51;
             this.label1.Text = "User Management";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(492, 91);
+            this.label2.Location = new System.Drawing.Point(479, 135);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 20);
+            this.label2.Size = new System.Drawing.Size(101, 21);
             this.label2.TabIndex = 51;
             this.label2.Text = "User Name";
             // 
@@ -100,7 +100,7 @@ namespace ABC_Car_Traders.view.Admin_Dashboard_Views
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUserName.ForeColor = System.Drawing.Color.White;
-            this.txtUserName.Location = new System.Drawing.Point(492, 114);
+            this.txtUserName.Location = new System.Drawing.Point(479, 158);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(382, 27);
@@ -109,12 +109,12 @@ namespace ABC_Car_Traders.view.Admin_Dashboard_Views
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(61, 187);
+            this.label3.Location = new System.Drawing.Point(48, 231);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.Size = new System.Drawing.Size(88, 21);
             this.label3.TabIndex = 51;
             this.label3.Text = "Password";
             // 
@@ -124,7 +124,7 @@ namespace ABC_Car_Traders.view.Admin_Dashboard_Views
             this.txtUserPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUserPassword.ForeColor = System.Drawing.Color.White;
-            this.txtUserPassword.Location = new System.Drawing.Point(61, 210);
+            this.txtUserPassword.Location = new System.Drawing.Point(48, 254);
             this.txtUserPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUserPassword.Name = "txtUserPassword";
             this.txtUserPassword.PasswordChar = '*';
@@ -135,12 +135,12 @@ namespace ABC_Car_Traders.view.Admin_Dashboard_Views
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(492, 187);
+            this.label4.Location = new System.Drawing.Point(479, 231);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 20);
+            this.label4.Size = new System.Drawing.Size(156, 21);
             this.label4.TabIndex = 51;
             this.label4.Text = "Confirm Password";
             // 
@@ -150,7 +150,7 @@ namespace ABC_Car_Traders.view.Admin_Dashboard_Views
             this.txtUserConPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserConPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUserConPassword.ForeColor = System.Drawing.Color.White;
-            this.txtUserConPassword.Location = new System.Drawing.Point(492, 210);
+            this.txtUserConPassword.Location = new System.Drawing.Point(479, 254);
             this.txtUserConPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUserConPassword.Name = "txtUserConPassword";
             this.txtUserConPassword.PasswordChar = '*';
@@ -166,7 +166,7 @@ namespace ABC_Car_Traders.view.Admin_Dashboard_Views
             this.cmbUserRole.Items.AddRange(new object[] {
             "Super Admin",
             "Admin"});
-            this.cmbUserRole.Location = new System.Drawing.Point(61, 312);
+            this.cmbUserRole.Location = new System.Drawing.Point(48, 356);
             this.cmbUserRole.Name = "cmbUserRole";
             this.cmbUserRole.Size = new System.Drawing.Size(373, 28);
             this.cmbUserRole.TabIndex = 53;
@@ -174,18 +174,19 @@ namespace ABC_Car_Traders.view.Admin_Dashboard_Views
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(61, 289);
+            this.label5.Location = new System.Drawing.Point(48, 333);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 20);
+            this.label5.Size = new System.Drawing.Size(85, 21);
             this.label5.TabIndex = 51;
             this.label5.Text = "User Role";
             // 
             // btnUserSave
             // 
-            this.btnUserSave.Location = new System.Drawing.Point(707, 490);
+            this.btnUserSave.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUserSave.Location = new System.Drawing.Point(722, 490);
             this.btnUserSave.Name = "btnUserSave";
             this.btnUserSave.Size = new System.Drawing.Size(139, 46);
             this.btnUserSave.TabIndex = 54;

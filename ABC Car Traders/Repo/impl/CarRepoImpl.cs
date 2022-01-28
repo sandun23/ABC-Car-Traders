@@ -11,6 +11,7 @@ namespace ABC_Car_Traders.Repo.impl
     {
         MySqlCommand command;
 
+        //This function use to save car details to Database
         public bool AddCar(Car car)
         {
             bool isSuccess;
@@ -36,6 +37,8 @@ namespace ABC_Car_Traders.Repo.impl
 
 
         }
+
+        //This function use to get all data in car from the db
         public List<Car> GetAllCars()
         {
             List<Car> carList = new List<Car>();
@@ -55,6 +58,7 @@ namespace ABC_Car_Traders.Repo.impl
 
         }
 
+        //This function use to filter cars
         public List<Car> FilterCarList(string filterString)
         {
             List<Car> carList = new List<Car>();
@@ -74,6 +78,7 @@ namespace ABC_Car_Traders.Repo.impl
 
         }
 
+        //This function use to filter cars for speicial for customers
         public Car FilterCarListCustomer(string carBrand, string carEdition, string carModel)
         {
             Car carDetails = new Car();
