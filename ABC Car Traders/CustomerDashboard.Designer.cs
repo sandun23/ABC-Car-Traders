@@ -266,6 +266,7 @@ namespace ABC_Car_Traders
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomerDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer Dashboard";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

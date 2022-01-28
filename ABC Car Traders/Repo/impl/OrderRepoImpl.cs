@@ -12,9 +12,106 @@ namespace ABC_Car_Traders.Repo.impl
 
         MySqlCommand command;
 
-        public bool AddOrder(Order order)
+        public string AddOrder(MainOrder mainOrder)
         {
-            throw new NotImplementedException();
+            int ORDER_ID;
+            MySqlTransaction transaction;
+            DBConnector dbConnection = new DBConnector();
+            dbConnection.OpenConnection();
+            transaction = dbConnection.conn.BeginTransaction();
+            string returnValue = "";
+            try
+            {
+                //int customerId = Global.UserID;
+                int customerId = 1;
+                command = new MySqlCommand("INSERT INTO orders(CustomerId,Status,TotalAmount) VALUES('" + customerId + "','" + mainOrder.Status + "','" + mainOrder.TotalAmount + "')", dbConnection.conn)
+                {
+                    Transaction = transaction
+                };
+                int resp = command.ExecuteNonQuery();
+                ORDER_ID = (int)command.LastInsertedId;
+                if (resp == 1)
+                {
+
+                    string orderToken = "ODR0" + ORDER_ID;
+                    command = new MySqlCommand("UPDATE orders SET OrderToken = '" + orderToken + "' WHERE OrderId = '" + ORDER_ID + "'", dbConnection.conn)
+                    {
+                        Transaction = transaction
+                    };
+                    int orderToeknResp = command.ExecuteNonQuery();
+                    if (orderToeknResp == 0)
+                    {
+                        transaction.Rollback();
+                        returnValue = "0";
+                    }
+
+                    foreach (var item in mainOrder.OrderDetailList)
+                    {
+                        command = new MySqlCommand("INSERT INTO order_detail(OrderId,UnitPrice,Qty,SubTotal,CarId,CarPartId)" +
+                       "VALUES('" + ORDER_ID + "','" + item.UnitPrice + "','" + item.Qty + "','" + item.SubTotal + "','" + item.CarId + "','" + item.CarPartId + "')", dbConnection.conn)
+                        {
+                            Transaction = transaction
+                        };
+                        int resp1 = command.ExecuteNonQuery();
+
+                        if (item.CarId != 0)
+                        {
+                            command = new MySqlCommand("UPDATE car SET Quantity = Quantity - '" + item.Qty + "' WHERE CarId = '" + item.CarId + "'", dbConnection.conn)
+                            {
+                                Transaction = transaction
+                            };
+                            int carQtyResp = command.ExecuteNonQuery();
+                            if (carQtyResp == 0)
+                            {
+                                transaction.Rollback();
+                                returnValue = "0";
+                            }
+                        }
+                        else if (item.CarPartId != 0)
+                        {
+                            command = new MySqlCommand("UPDATE spare_part SET Quantity = Quantity - '" + item.Qty + "' WHERE SparePartId = '" + item.CarPartId + "'", dbConnection.conn)
+                            {
+                                Transaction = transaction
+                            };
+                            int carPartQtyResp = command.ExecuteNonQuery();
+                            if (carPartQtyResp == 0)
+                            {
+                                transaction.Rollback();
+                                returnValue = "0";
+                            }
+                        }
+
+                        if (resp1 == 0)
+                        {
+
+                            transaction.Rollback();
+                            returnValue = "0";
+                        }
+                    }
+                    transaction.Commit();
+                    command = new MySqlCommand("Select o.OrderToken FROM orders o WHERE o.OrderId = '" + ORDER_ID + "'", dbConnection.conn);
+                    MySqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        returnValue = (string)reader["OrderToken"];
+                    }
+
+                    return returnValue;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+
+                dbConnection.CloseConnection();
+
+            }
+            return returnValue;
         }
 
         public List<Order> FilterOrderList(string filterString)

@@ -73,5 +73,23 @@ namespace ABC_Car_Traders.Repo.impl
             return carList;
 
         }
+
+        public Car FilterCarListCustomer(string carBrand, string carEdition, string carModel)
+        {
+            Car carDetails = new Car();
+            DBConnector dbConnection = new DBConnector();
+            dbConnection.OpenConnection();
+            command = new MySqlCommand("SELECT * FROM car c WHERE (c.Brand LIKE '%" + carBrand + "%' OR c.Model LIKE '%" + carEdition + "%' OR c.Model LIKE '%" + carModel + "%');", dbConnection.conn);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                 carDetails = new Car(Convert.ToInt32(reader["CarId"]), (string)reader["Brand"], (string)reader["Edition"], (string)reader["Model"], (string)reader["Transmission"], (string)reader["FuelType"],
+                   (string)reader["BodyType"], (string)reader["EngineCapacity"], (string)reader["Colour"], (string)reader["ManufacturedYear"], (string)reader["Description"],
+                   Convert.ToDouble(reader["Price"]), Convert.ToInt32(reader["Quantity"]));
+               
+            }
+            dbConnection.CloseConnection();
+            return carDetails;
+        }
     }
 }

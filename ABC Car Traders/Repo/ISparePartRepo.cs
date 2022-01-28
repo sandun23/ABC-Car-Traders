@@ -12,5 +12,7 @@ namespace ABC_Car_Traders.Repo
         List<SparePart> GetAllSpareParts();
 
         List<SparePart> FilterSparePartList(string filterString);
+
+        SparePart FilterSparePartListCustomer(string spareName, string sparebrand);
     }
 }

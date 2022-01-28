@@ -6,6 +6,10 @@ namespace ABC_Car_Traders.model
 {
   public class Car
     {
+        public Car()
+        {
+        }
+
         public Car(int carId, string brand, string edition, string model, string transmission, string fuelType, string bodyType, string engineCapacity, string colour, string manufacturedYear, string description, double price, int quantity)
         {
             CarId = carId;

@@ -6,7 +6,7 @@ namespace ABC_Car_Traders.model
 {
     class OrderDetails
     {
-        public OrderDetails(int orderDetailId, int orderId, double unitPrice, int qty, int subTotal, int carId, int carPartId)
+        public OrderDetails(int orderDetailId, int orderId, double unitPrice, int qty, double subTotal, int carId, int carPartId)
         {
             OrderDetailId = orderDetailId;
             OrderId = orderId;
@@ -21,7 +21,7 @@ namespace ABC_Car_Traders.model
         public int OrderId { get; set; }
         public double UnitPrice { get; set; }
         public int Qty { get; set; }
-        public int SubTotal { get; set; }
+        public double SubTotal { get; set; }
         public int CarId { get; set; }
         public int CarPartId { get; set; }
 

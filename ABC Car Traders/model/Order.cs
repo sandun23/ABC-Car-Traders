@@ -6,6 +6,10 @@ namespace ABC_Car_Traders.model
 {
     class Order
     {
+        public Order()
+        {
+        }
+
         public Order(int orderId, string orderToken, int customerId, string status, string orderDate, double totalAmount)
         {
             OrderId = orderId;

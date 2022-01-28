@@ -50,6 +50,22 @@ namespace ABC_Car_Traders.Repo.impl
             return sparePartList;
         }
 
+        public SparePart FilterSparePartListCustomer(string spareName, string sparebrand)
+        {
+            SparePart sparePart = new SparePart();
+            DBConnector dbConnection = new DBConnector();
+            dbConnection.OpenConnection();
+            command = new MySqlCommand("SELECT * FROM spare_part c WHERE (c.SparePartName LIKE '%" + spareName + "%' OR c.Model LIKE '%" + sparebrand + "%');", dbConnection.conn);
+            MySqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                sparePart = new SparePart(Convert.ToInt32(reader["SparePartId"]), (string)reader["Brand"], (string)reader["SparePartName"], (string)reader["Model"],
+                   Convert.ToDouble(reader["Price"]), Convert.ToInt32(reader["Quantity"]), (string)reader["Description"]);
+            }
+            dbConnection.CloseConnection();
+            return sparePart;
+        }
+
         public List<SparePart> GetAllSpareParts()
         {
             List<SparePart> sparePartList = new List<SparePart>();

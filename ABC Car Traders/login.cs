@@ -26,6 +26,7 @@ namespace ABC_Car_Traders
 
             if (userRole == "Admin")
             {
+
                 this.Hide();
                 var adminDashboard = new AdminDashboard();
                 adminDashboard.Closed += (s, args) => this.Close();
@@ -55,6 +56,11 @@ namespace ABC_Car_Traders
         {
            // MessageBox.Show("Are You Sure",s)
             this.Close();
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

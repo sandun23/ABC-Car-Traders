@@ -12,6 +12,7 @@ namespace ABC_Car_Traders.Repo
         List<Car> GetAllCars();
 
         List<Car> FilterCarList(string filterString);
+        Car FilterCarListCustomer(string carBrand,string carEdition, string carModel);
 
 
     }

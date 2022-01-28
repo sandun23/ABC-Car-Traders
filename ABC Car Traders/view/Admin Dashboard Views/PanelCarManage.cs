@@ -60,12 +60,12 @@ namespace ABC_Car_Traders.view
        
 
 
-        private void GetAllCars(object sender, EventArgs e)
-        {
-            txtCarSearch.Text = "";
-            List<Car> cars = carRepoImpl.GetAllCars();
-            tblCarDetails.DataSource = cars;
-        }
+            private void GetAllCars(object sender, EventArgs e)
+            {
+                txtCarSearch.Text = "";
+                List<Car> cars = carRepoImpl.GetAllCars();
+                tblCarDetails.DataSource = cars;
+            }
 
         private void SearchCartKeyUp(object sender, KeyEventArgs e)
         {

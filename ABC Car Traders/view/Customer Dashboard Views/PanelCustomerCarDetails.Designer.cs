@@ -39,7 +39,10 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             // 
             // tblCustomerCarDetails
             // 
+            this.tblCustomerCarDetails.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.tblCustomerCarDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tblCustomerCarDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblCustomerCarDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.tblCustomerCarDetails.Location = new System.Drawing.Point(13, 116);
             this.tblCustomerCarDetails.Name = "tblCustomerCarDetails";
             this.tblCustomerCarDetails.RowHeadersWidth = 51;

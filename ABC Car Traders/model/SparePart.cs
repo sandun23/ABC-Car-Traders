@@ -6,6 +6,10 @@ namespace ABC_Car_Traders.model
 {
    public class SparePart
     {
+        public SparePart()
+        {
+        }
+
         public SparePart(int sparePartID, string brand, string sparePartName, string model, double price, int quantity, string description)
         {
             SparePartID = sparePartID;

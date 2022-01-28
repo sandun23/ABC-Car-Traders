@@ -7,7 +7,7 @@ namespace ABC_Car_Traders.Repo
 {
     interface IOrderRepo
     {
-        bool AddOrder(Order order);
+        string AddOrder(MainOrder mainOrder);
 
         List<Order> GetAllOrders();
 
