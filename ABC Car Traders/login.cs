@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ABC_Car_Traders.Repo.impl;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,17 @@ namespace ABC_Car_Traders
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
+
+            if (txtLoginEmail.Text == "" || txtLoginPassword.Text == "") {
+
+                MessageBox.Show("Password Or Email Incorrect", "Warnig", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+            else
+            {
+
+            }
             string userRole = cmbLoginUserRole.Text;
 
             string email = txtLoginEmail.Text;
@@ -27,17 +39,45 @@ namespace ABC_Car_Traders
             if (userRole == "Admin")
             {
 
-                this.Hide();
-                var adminDashboard = new AdminDashboard();
-                adminDashboard.Closed += (s, args) => this.Close();
-                adminDashboard.Show();
+                UserRepoImpl userRepoImpl = new UserRepoImpl();
+
+                int adminUser = userRepoImpl.AdminLogin(txtLoginEmail.Text, txtLoginPassword.Text);
+
+                if (adminUser == 1)
+                {
+                    this.Hide();
+                    var adminDashboard = new AdminDashboard();
+                    adminDashboard.Closed += (s, args) => this.Close();
+                    adminDashboard.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Password Or Email Incorrect", "Warnig", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+               
             }
             else if(userRole == "Customer")
             {
-                this.Hide();
-                var customerDashboard = new CustomerDashboard();
-                customerDashboard.Closed += (s, args) => this.Close();
-                customerDashboard.Show();
+
+                CustomerRepoImpl customerRepoImpl = new CustomerRepoImpl();
+
+              int customerUser =  customerRepoImpl.CustomerLogin(txtLoginEmail.Text, txtLoginPassword.Text);
+
+
+                if (customerUser == 1)
+                {
+                    this.Hide();
+                    var customerDashboard = new CustomerDashboard();
+                    customerDashboard.Closed += (s, args) => this.Close();
+                    customerDashboard.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Password Or Email Incorrect", "Warnig", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
             }
             
 

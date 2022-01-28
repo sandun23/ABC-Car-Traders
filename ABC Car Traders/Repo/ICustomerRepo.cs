@@ -12,5 +12,7 @@ namespace ABC_Car_Traders.Repo
         List<Customer> GetAllCustomers();
 
         List<Customer> FilterCustomerList(string filterString);
+
+        int CustomerLogin(string email , string password);
     }
 }

@@ -32,6 +32,7 @@ namespace ABC_Car_Traders
             this.lbLoginEmail = new System.Windows.Forms.Label();
             this.btnlogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnClose = new System.Windows.Forms.Button();
             this.cmbLoginUserRole = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,7 +41,8 @@ namespace ABC_Car_Traders
             this.txtLoginEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnClose = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,8 +75,9 @@ namespace ABC_Car_Traders
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.BtnClose);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.cmbLoginUserRole);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtLoginPassword);
@@ -83,12 +86,29 @@ namespace ABC_Car_Traders
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lbLoginEmail);
             this.panel1.Controls.Add(this.btnlogin);
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.Location = new System.Drawing.Point(188, 84);
+            this.panel1.Location = new System.Drawing.Point(513, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(551, 604);
+            this.panel1.Size = new System.Drawing.Size(537, 768);
             this.panel1.TabIndex = 4;
+            // 
+            // BtnClose
+            // 
+            this.BtnClose.BackColor = System.Drawing.Color.Transparent;
+            this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnClose.FlatAppearance.BorderSize = 0;
+            this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnClose.ForeColor = System.Drawing.Color.Red;
+            this.BtnClose.Location = new System.Drawing.Point(482, 20);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(27, 30);
+            this.BtnClose.TabIndex = 10;
+            this.BtnClose.Text = "X";
+            this.BtnClose.UseVisualStyleBackColor = false;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // cmbLoginUserRole
             // 
@@ -106,10 +126,12 @@ namespace ABC_Car_Traders
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ABC_Car_Traders.Properties.Resources.Red_and_Black_Modern_Car_Auto_Services_Logo__2_;
-            this.pictureBox1.Location = new System.Drawing.Point(186, 20);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::ABC_Car_Traders.Properties.Resources.Red_and_Black_Modern_Car_Auto_Services_Logo__6_;
+            this.pictureBox1.Location = new System.Drawing.Point(82, 234);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(347, 264);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -142,6 +164,7 @@ namespace ABC_Car_Traders
             // 
             this.txtLoginPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.txtLoginPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLoginPassword.ForeColor = System.Drawing.Color.White;
             this.txtLoginPassword.Location = new System.Drawing.Point(120, 273);
             this.txtLoginPassword.MaxLength = 8;
             this.txtLoginPassword.Multiline = true;
@@ -154,6 +177,7 @@ namespace ABC_Car_Traders
             // 
             this.txtLoginEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.txtLoginEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLoginEmail.ForeColor = System.Drawing.Color.White;
             this.txtLoginEmail.Location = new System.Drawing.Point(120, 188);
             this.txtLoginEmail.Name = "txtLoginEmail";
             this.txtLoginEmail.Size = new System.Drawing.Size(311, 30);
@@ -179,31 +203,40 @@ namespace ABC_Car_Traders
             this.label1.TabIndex = 4;
             this.label1.Text = "Password";
             // 
-            // BtnClose
+            // label4
             // 
-            this.BtnClose.BackColor = System.Drawing.Color.Transparent;
-            this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnClose.FlatAppearance.BorderSize = 0;
-            this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnClose.ForeColor = System.Drawing.Color.Red;
-            this.BtnClose.Location = new System.Drawing.Point(932, 12);
-            this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(27, 30);
-            this.BtnClose.TabIndex = 10;
-            this.BtnClose.Text = "X";
-            this.BtnClose.UseVisualStyleBackColor = false;
-            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 37);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "LOGIN";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(12, 713);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(162, 46);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Develop By\r\nJanitha Sandun\r\n";
             // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(75)))), ((int)(((byte)(85)))));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(971, 768);
-            this.Controls.Add(this.BtnClose);
+            this.BackgroundImage = global::ABC_Car_Traders.Properties.Resources._28803;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1050, 768);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -213,6 +246,7 @@ namespace ABC_Car_Traders
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -229,6 +263,8 @@ namespace ABC_Car_Traders
         private System.Windows.Forms.ComboBox cmbLoginUserRole;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnClose;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

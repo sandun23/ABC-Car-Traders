@@ -1,4 +1,5 @@
-﻿using ABC_Car_Traders.view.Customer_Dashboard_Views;
+﻿using ABC_Car_Traders.model;
+using ABC_Car_Traders.view.Customer_Dashboard_Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,8 @@ namespace ABC_Car_Traders
         public CustomerDashboard()
         {
             InitializeComponent();
+
+            lblusername.Text = CommonLogin.user_name;
             lblTitle.Text = "Dashboard";
             this.PnlCustomerFormLoader.Controls.Clear();
             PanelCustomerDashboard panelCustomerDashboard_vrb = new PanelCustomerDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };

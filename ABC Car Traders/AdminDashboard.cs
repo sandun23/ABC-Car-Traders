@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using ABC_Car_Traders.view;
 using ABC_Car_Traders.view.Admin_Dashboard_Views;
+using ABC_Car_Traders.model;
 
 namespace ABC_Car_Traders
 {
@@ -31,7 +32,7 @@ namespace ABC_Car_Traders
         public AdminDashboard()
         {
             InitializeComponent();
-
+            lblusername.Text = CommonLogin.user_name;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             lblTitle.Text = "Dashboard";
             this.PnlFormLoader.Controls.Clear();

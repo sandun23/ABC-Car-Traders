@@ -12,5 +12,7 @@ namespace ABC_Car_Traders.Repo
         List<AdminUsers> GetAllAdminUsers();
 
         List<AdminUsers> FilterAdminUserList(string filterString);
+
+        int AdminLogin(string email, string password);
     }
 }
