@@ -62,17 +62,29 @@ namespace ABC_Car_Traders.view
             this.txtCarSearch = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnCarSearch = new System.Windows.Forms.Button();
+            this.cmbCarModel = new System.Windows.Forms.ComboBox();
+            this.cmbCarEdition = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cmbCarBrand = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarDetails)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -109,21 +121,24 @@ namespace ABC_Car_Traders.view
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(883, 547);
+            this.tabPage1.Size = new System.Drawing.Size(883, 546);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Car";
             // 
             // btnCarSave
             // 
+            this.btnCarSave.BackColor = System.Drawing.Color.Lime;
+            this.btnCarSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCarSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCarSave.Location = new System.Drawing.Point(714, 483);
             this.btnCarSave.Name = "btnCarSave";
             this.btnCarSave.Size = new System.Drawing.Size(139, 46);
             this.btnCarSave.TabIndex = 29;
             this.btnCarSave.Text = "Save";
-            this.btnCarSave.UseVisualStyleBackColor = true;
+            this.btnCarSave.UseVisualStyleBackColor = false;
             this.btnCarSave.Click += new System.EventHandler(this.btnCarSave_Click);
             // 
             // cmbFuelType
@@ -132,12 +147,9 @@ namespace ABC_Car_Traders.view
             this.cmbFuelType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFuelType.ForeColor = System.Drawing.Color.White;
             this.cmbFuelType.FormattingEnabled = true;
-            this.cmbFuelType.Items.AddRange(new object[] {
-            "Petrol",
-            "Diesel"});
             this.cmbFuelType.Location = new System.Drawing.Point(455, 300);
             this.cmbFuelType.Name = "cmbFuelType";
-            this.cmbFuelType.Size = new System.Drawing.Size(288, 28);
+            this.cmbFuelType.Size = new System.Drawing.Size(288, 29);
             this.cmbFuelType.TabIndex = 28;
             // 
             // cmbTransmission
@@ -146,13 +158,9 @@ namespace ABC_Car_Traders.view
             this.cmbTransmission.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTransmission.ForeColor = System.Drawing.Color.White;
             this.cmbTransmission.FormattingEnabled = true;
-            this.cmbTransmission.Items.AddRange(new object[] {
-            "Select Type",
-            "Auto",
-            "Manual"});
             this.cmbTransmission.Location = new System.Drawing.Point(95, 300);
             this.cmbTransmission.Name = "cmbTransmission";
-            this.cmbTransmission.Size = new System.Drawing.Size(288, 28);
+            this.cmbTransmission.Size = new System.Drawing.Size(288, 29);
             this.cmbTransmission.TabIndex = 27;
             // 
             // txtEngineCap
@@ -225,7 +233,7 @@ namespace ABC_Car_Traders.view
             this.txtDesc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(359, 74);
+            this.txtDesc.Size = new System.Drawing.Size(452, 74);
             this.txtDesc.TabIndex = 19;
             // 
             // txtColour
@@ -411,14 +419,14 @@ namespace ABC_Car_Traders.view
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label13.Location = new System.Drawing.Point(21, 26);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(88, 21);
+            this.label13.Size = new System.Drawing.Size(133, 22);
             this.label13.TabIndex = 16;
-            this.label13.Text = "Add Car ";
+            this.label13.Text = "Add New Car ";
             // 
             // label1
             // 
@@ -439,10 +447,10 @@ namespace ABC_Car_Traders.view
             this.tabPage2.Controls.Add(this.txtCarSearch);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(883, 547);
+            this.tabPage2.Size = new System.Drawing.Size(883, 546);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "View Car Details";
             // 
@@ -472,12 +480,12 @@ namespace ABC_Car_Traders.view
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label14.Location = new System.Drawing.Point(9, 19);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(148, 21);
+            this.label14.Size = new System.Drawing.Size(152, 22);
             this.label14.TabIndex = 26;
             this.label14.Text = "View Car Details";
             // 
@@ -495,6 +503,119 @@ namespace ABC_Car_Traders.view
             this.label15.TabIndex = 27;
             this.label15.Text = "Car";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.tabPage3.Controls.Add(this.label19);
+            this.tabPage3.Controls.Add(this.btnCarSearch);
+            this.tabPage3.Controls.Add(this.cmbCarModel);
+            this.tabPage3.Controls.Add(this.cmbCarEdition);
+            this.tabPage3.Controls.Add(this.label16);
+            this.tabPage3.Controls.Add(this.label17);
+            this.tabPage3.Controls.Add(this.cmbCarBrand);
+            this.tabPage3.Controls.Add(this.label18);
+            this.tabPage3.Location = new System.Drawing.Point(4, 30);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(883, 546);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Update Car Details";
+            // 
+            // btnCarSearch
+            // 
+            this.btnCarSearch.BackColor = System.Drawing.Color.Yellow;
+            this.btnCarSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCarSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarSearch.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCarSearch.Location = new System.Drawing.Point(717, 102);
+            this.btnCarSearch.Name = "btnCarSearch";
+            this.btnCarSearch.Size = new System.Drawing.Size(139, 40);
+            this.btnCarSearch.TabIndex = 82;
+            this.btnCarSearch.Text = "Car Search";
+            this.btnCarSearch.UseVisualStyleBackColor = false;
+            this.btnCarSearch.Click += new System.EventHandler(this.btnCarSearch_Click);
+            // 
+            // cmbCarModel
+            // 
+            this.cmbCarModel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbCarModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCarModel.ForeColor = System.Drawing.Color.White;
+            this.cmbCarModel.FormattingEnabled = true;
+            this.cmbCarModel.Location = new System.Drawing.Point(463, 109);
+            this.cmbCarModel.Name = "cmbCarModel";
+            this.cmbCarModel.Size = new System.Drawing.Size(170, 29);
+            this.cmbCarModel.TabIndex = 79;
+            // 
+            // cmbCarEdition
+            // 
+            this.cmbCarEdition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbCarEdition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCarEdition.ForeColor = System.Drawing.Color.White;
+            this.cmbCarEdition.FormattingEnabled = true;
+            this.cmbCarEdition.Location = new System.Drawing.Point(241, 109);
+            this.cmbCarEdition.Name = "cmbCarEdition";
+            this.cmbCarEdition.Size = new System.Drawing.Size(170, 29);
+            this.cmbCarEdition.TabIndex = 80;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label16.Location = new System.Drawing.Point(463, 86);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(100, 21);
+            this.label16.TabIndex = 76;
+            this.label16.Text = "Car Model";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label17.Location = new System.Drawing.Point(241, 86);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(101, 21);
+            this.label17.TabIndex = 77;
+            this.label17.Text = "Car Edition";
+            // 
+            // cmbCarBrand
+            // 
+            this.cmbCarBrand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.cmbCarBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCarBrand.ForeColor = System.Drawing.Color.White;
+            this.cmbCarBrand.FormattingEnabled = true;
+            this.cmbCarBrand.Location = new System.Drawing.Point(21, 109);
+            this.cmbCarBrand.Name = "cmbCarBrand";
+            this.cmbCarBrand.Size = new System.Drawing.Size(170, 29);
+            this.cmbCarBrand.TabIndex = 81;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label18.Location = new System.Drawing.Point(21, 86);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(95, 21);
+            this.label18.TabIndex = 78;
+            this.label18.Text = "Car Brand";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label19.Location = new System.Drawing.Point(9, 27);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(175, 22);
+            this.label19.TabIndex = 83;
+            this.label19.Text = "Update Car Details";
             // 
             // PanelCarManage
             // 
@@ -514,6 +635,8 @@ namespace ABC_Car_Traders.view
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarDetails)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -552,5 +675,14 @@ namespace ABC_Car_Traders.view
         private System.Windows.Forms.TextBox txtCarSearch;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button btnCarSearch;
+        private System.Windows.Forms.ComboBox cmbCarModel;
+        private System.Windows.Forms.ComboBox cmbCarEdition;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox cmbCarBrand;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
     }
 }

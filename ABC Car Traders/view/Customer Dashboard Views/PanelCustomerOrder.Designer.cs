@@ -29,6 +29,7 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tblCart = new System.Windows.Forms.DataGridView();
             this.lblOrderCancel = new System.Windows.Forms.Button();
@@ -58,8 +59,10 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.label7 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblCart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -204,6 +207,7 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.cmbCarModel.Name = "cmbCarModel";
             this.cmbCarModel.Size = new System.Drawing.Size(170, 28);
             this.cmbCarModel.TabIndex = 70;
+            this.cmbCarModel.SelectedIndexChanged += new System.EventHandler(this.cmbCarModel_SelectedIndexChanged);
             // 
             // cmbCarEdition
             // 
@@ -215,6 +219,7 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.cmbCarEdition.Name = "cmbCarEdition";
             this.cmbCarEdition.Size = new System.Drawing.Size(170, 28);
             this.cmbCarEdition.TabIndex = 71;
+            this.cmbCarEdition.SelectedIndexChanged += new System.EventHandler(this.cmbCarEdition_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -239,6 +244,7 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.label2.Size = new System.Drawing.Size(100, 21);
             this.label2.TabIndex = 63;
             this.label2.Text = "Car Model";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // cmbSparePartName
             // 
@@ -274,6 +280,7 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.label1.Size = new System.Drawing.Size(101, 21);
             this.label1.TabIndex = 65;
             this.label1.Text = "Car Edition";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -297,6 +304,7 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.cmbCarBrand.Name = "cmbCarBrand";
             this.cmbCarBrand.Size = new System.Drawing.Size(170, 28);
             this.cmbCarBrand.TabIndex = 73;
+            this.cmbCarBrand.SelectedIndexChanged += new System.EventHandler(this.cmbCarBrand_SelectedIndexChanged);
             // 
             // lblFillPrice
             // 
@@ -405,6 +413,7 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.label7.Size = new System.Drawing.Size(95, 21);
             this.label7.TabIndex = 68;
             this.label7.Text = "Car Brand";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label16
             // 
@@ -443,6 +452,7 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblCart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -478,5 +488,6 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
         private System.Windows.Forms.Label lblFillPrice;
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }

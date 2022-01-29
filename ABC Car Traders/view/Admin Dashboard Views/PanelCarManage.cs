@@ -20,6 +20,20 @@ namespace ABC_Car_Traders.view
             InitializeComponent();
             List<Car> cars = carRepoImpl.GetAllCars();
             tblCarDetails.DataSource = cars;
+
+            cmbTransmission.Items.Add("Select Type");
+            cmbTransmission.Items.Add("Auto");
+            cmbTransmission.Items.Add("Manual");
+            cmbTransmission.SelectedIndex = 0;
+            
+
+            cmbFuelType.Items.Add("Select Type");
+            cmbFuelType.Items.Add("Petrol");
+            cmbFuelType.Items.Add("Diesel");
+
+            cmbFuelType.SelectedIndex = 0;
+
+            GetSearchAllCars();
         }
 
         private void CleanTexts()
@@ -43,7 +57,7 @@ namespace ABC_Car_Traders.view
         {
             if (txtBodyType.Text == "" || txtBrandName.Text == "" || txtEdition.Text == "" || txtModel.Text == "" || txtModel.Text == "" ||  cmbFuelType.Text == "" || txtEngineCap.Text == "" || txtColour.Text == "" || txtManYear.Text == "" || txtDesc.Text == "" || txtPrice.Text == "" || txtQty.Text == "" )
             {
-                MessageBox.Show("Please Fill All the Blanks", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please Fill All the Blanks", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
@@ -59,7 +73,7 @@ namespace ABC_Car_Traders.view
                 }
                 else
                 {
-                    MessageBox.Show("Error", "asdasd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
            
@@ -82,6 +96,62 @@ namespace ABC_Car_Traders.view
         {
             List<Car> cars = carRepoImpl.FilterCarList(txtCarSearch.Text);
             tblCarDetails.DataSource = cars;
+        }
+
+        private void GetSearchAllCars()
+        {
+
+            List<Car> cars = carRepoImpl.GetAllCars();
+            cmbCarBrand.Items.Add("Please Select");
+            cmbCarEdition.Items.Add("Please Select");
+            cmbCarModel.Items.Add("Please Select");
+            cmbCarBrand.SelectedIndex = 0;
+            cmbCarEdition.SelectedIndex = 0;
+            cmbCarModel.SelectedIndex = 0;
+            foreach (var car in cars)
+            {
+                //  var car_details = car.Brand + "_" + car.Edition;
+                var car_brand = car.Brand;
+                var car_edition = car.Edition;
+                var car_model = car.Model;
+                Console.WriteLine(car_brand);
+                cmbCarBrand.Items.Add(car_brand);
+                cmbCarEdition.Items.Add(car_edition);
+                cmbCarModel.Items.Add(car_model);
+            }
+        }
+
+
+        private void btnCarSearch_Click(object sender, EventArgs e)
+        {
+            if (cmbCarBrand.Text == "Please Select" || cmbCarEdition.Text == "Please Select" || cmbCarModel.Text == "Please Select")
+            {
+
+                MessageBox.Show("Please Select the Product", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
+            }
+            else
+            {
+                Car cars = carRepoImpl.FilterCarListCustomer(cmbCarBrand.Text, cmbCarEdition.Text, cmbCarModel.Text);
+
+                //lblTotal.Text = "Car Model";
+                //lblBrand.Text = "Car Brand";
+                //lblEdition.Text = "Car Edition";
+                //lblQty.Text = "QTY" + " (Remaining - " + cars.Quantity + ")";
+
+                //lblFillBrand.Text = cars.Brand;
+                //lblFillEdition.Text = cars.Edition;
+                //lblFillTotal.Text = cars.Model;
+                //lblFillPrice.Text = Convert.ToString(cars.Price + ".00");
+
+                //brand = cars.Brand;
+                //colour = cars.Colour;
+                //model = cars.Model;
+                //unit_Price = cars.Price;
+                //qty = cars.Quantity;
+                //txtFillQty.Text = "0";
+            }
         }
     }
 }

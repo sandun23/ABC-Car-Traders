@@ -249,5 +249,35 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
 
             }
         }
+
+        private void cmbCarModel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCarEdition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCarBrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
