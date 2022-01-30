@@ -40,7 +40,7 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             tblCart.Columns[6].Name = "Sub Total";
         }
 
-
+        //Get All Car Details to order page
         private void GetAllCars()
         {
             
@@ -64,6 +64,8 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             }
         }
 
+
+        //Get All Spare Part Details to order page
         private void GetAllSpareParts()
         {
             List<SparePart> spareParts = sparePartRepoImpl.GetAllSpareParts();
@@ -83,6 +85,8 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             }
         }
 
+
+        //this function use to search car details to order page
         private void btnCarSearch_Click(object sender, EventArgs e)
         {
             if (cmbCarBrand.Text == "Please Select" || cmbCarEdition.Text == "Please Select" || cmbCarModel.Text == "Please Select") {
@@ -95,14 +99,14 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             {
                 Car cars = carRepoImpl.FilterCarListCustomer(cmbCarBrand.Text, cmbCarEdition.Text, cmbCarModel.Text);
 
-                lblTotal.Text = "Car Model";
+                lblModel.Text = "Car Model";
                 lblBrand.Text = "Car Brand";
                 lblEdition.Text = "Car Edition";
                 lblQty.Text = "QTY" + " (Remaining - " + cars.Quantity + ")";
 
                 lblFillBrand.Text = cars.Brand;
                 lblFillEdition.Text = cars.Edition;
-                lblFillTotal.Text = cars.Model;
+                lblFillModel.Text = cars.Model;
                 lblFillPrice.Text = Convert.ToString(cars.Price + ".00");
 
                 brand = cars.Brand;
@@ -115,6 +119,8 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
            
         }
 
+
+        //this function use to search spare part details to order page
         private void btnSparePartSearch_Click(object sender, EventArgs e)
         {
 
@@ -131,8 +137,8 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
                 lblBrand.Text = "Spare Part Brand";
                 lblEdition.Text = "Spare Part Edition";
                 lblQty.Text = "QTY" + " (Remaining - " + sparePart.Quantity + ")";
-                lblTotal.Text = "";
-                lblFillTotal.Text = "";
+                lblModel.Text = "";
+                lblFillModel.Text = "";
 
 
                 lblFillBrand.Text = sparePart.Brand;
@@ -149,6 +155,8 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             
         }
 
+
+        //this function use to add a order details to cart table
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
           //  if (ValidateItemForm())
@@ -195,15 +203,10 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
         //    }
         //}
 
-        private void QuantityKeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != 8)
-            {
-                MessageBox.Show("Quantity allows only numeric values", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtFillQty.Text = "0";
-            }
-        }
 
+
+
+        //this function use to clear all fields after updating
         private void ClearCartTable()
         {
             cmbCarBrand.SelectedIndex = 0;
@@ -222,6 +225,9 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             spare_Part_ID = 0;
         }
 
+
+
+        //this function use to place a order
         private void btnPlaceAOrder_Click(object sender, EventArgs e)
         {
             Console.WriteLine(orderDetailsList.Count == 0);
@@ -248,36 +254,6 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
                 MessageBox.Show("Cart is empty , Please add items before submitting", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
-        }
-
-        private void cmbCarModel_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbCarEdition_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbCarBrand_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

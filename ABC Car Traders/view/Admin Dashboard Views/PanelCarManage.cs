@@ -14,6 +14,9 @@ namespace ABC_Car_Traders.view
     {
 
         CarRepoImpl carRepoImpl = new CarRepoImpl();
+        private int car_ID;
+        private int qty;
+        private double price;
         //private readonly CarRepoImpl carRepository = new CarRepoImpl();
         public PanelCarManage()
         {
@@ -50,6 +53,16 @@ namespace ABC_Car_Traders.view
             txtDesc.Text = "";
             txtPrice.Text = "";
             txtQty.Text = "";
+
+            cmbCarBrand.SelectedIndex = 0;
+            cmbCarEdition.SelectedIndex = 0;
+            cmbCarModel.SelectedIndex = 0;
+
+            lblFillBrand.Text = "";
+            lblFillEdition.Text = "";
+            lblFillModel.Text = "";
+            txtFillPrice.Text = "";
+            txtFillQty.Text = "";
         }
 
         //This function use to save car details
@@ -62,7 +75,7 @@ namespace ABC_Car_Traders.view
             }
             else
             {
-                Car car = new Car(0, txtBrandName.Text, txtEdition.Text, txtModel.Text, txtModel.Text, cmbFuelType.Text, txtBodyType.Text, txtEngineCap.Text, txtColour.Text, txtManYear.Text, txtDesc.Text, Convert.ToDouble(txtPrice.Text), Convert.ToInt32(txtQty.Text));
+                Car car = new Car(0, txtBrandName.Text, txtEdition.Text, txtModel.Text, cmbTransmission.Text, cmbFuelType.Text, txtBodyType.Text, txtEngineCap.Text, txtColour.Text, txtManYear.Text, txtDesc.Text, Convert.ToDouble(txtPrice.Text), Convert.ToInt32(txtQty.Text));
                 bool v = carRepoImpl.AddCar(car);
 
                 if (v)
@@ -135,23 +148,43 @@ namespace ABC_Car_Traders.view
             {
                 Car cars = carRepoImpl.FilterCarListCustomer(cmbCarBrand.Text, cmbCarEdition.Text, cmbCarModel.Text);
 
-                //lblTotal.Text = "Car Model";
-                //lblBrand.Text = "Car Brand";
-                //lblEdition.Text = "Car Edition";
-                //lblQty.Text = "QTY" + " (Remaining - " + cars.Quantity + ")";
+                lblModel.Text = "Car Model";
+                lblBrand.Text = "Car Brand";
+                lblEdition.Text = "Car Edition";
+                lblQty.Text = "QTY";
 
-                //lblFillBrand.Text = cars.Brand;
-                //lblFillEdition.Text = cars.Edition;
-                //lblFillTotal.Text = cars.Model;
-                //lblFillPrice.Text = Convert.ToString(cars.Price + ".00");
 
-                //brand = cars.Brand;
-                //colour = cars.Colour;
-                //model = cars.Model;
-                //unit_Price = cars.Price;
-                //qty = cars.Quantity;
-                //txtFillQty.Text = "0";
+                qty = cars.Quantity;
+                lblFillBrand.Text = cars.Brand;
+                lblFillEdition.Text = cars.Edition;
+                lblFillModel.Text = cars.Model;
+                txtFillPrice.Text = Convert.ToString(cars.Price + ".00");
+                txtFillQty.Text = qty.ToString();
+
+
+                car_ID = cars.CarId;
+             
+                
             }
         }
+
+        private void btnUpdateCarDetails_Click(object sender, EventArgs e)
+        {
+
+            bool v = carRepoImpl.UpdateCarDetails(car_ID, Convert.ToDouble(txtFillPrice.Text), Convert.ToInt32(txtFillQty.Text));
+
+            if (v)
+            {
+                MessageBox.Show("Updated Successfully", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CleanTexts();
+            }
+            else
+            {
+                MessageBox.Show("Please Try Again", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
+
+       
     }
 }

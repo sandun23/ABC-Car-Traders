@@ -63,6 +63,17 @@ namespace ABC_Car_Traders.view
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txtFillPrice = new System.Windows.Forms.TextBox();
+            this.txtFillQty = new System.Windows.Forms.TextBox();
+            this.lblQty = new System.Windows.Forms.Label();
+            this.lblFillModel = new System.Windows.Forms.Label();
+            this.lblFillEdition = new System.Windows.Forms.Label();
+            this.lblFillBrand = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblModel = new System.Windows.Forms.Label();
+            this.lblEdition = new System.Windows.Forms.Label();
+            this.lblBrand = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.btnCarSearch = new System.Windows.Forms.Button();
             this.cmbCarModel = new System.Windows.Forms.ComboBox();
             this.cmbCarEdition = new System.Windows.Forms.ComboBox();
@@ -70,7 +81,7 @@ namespace ABC_Car_Traders.view
             this.label17 = new System.Windows.Forms.Label();
             this.cmbCarBrand = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.btnUpdateCarDetails = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -507,6 +518,17 @@ namespace ABC_Car_Traders.view
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.tabPage3.Controls.Add(this.btnUpdateCarDetails);
+            this.tabPage3.Controls.Add(this.txtFillPrice);
+            this.tabPage3.Controls.Add(this.txtFillQty);
+            this.tabPage3.Controls.Add(this.lblQty);
+            this.tabPage3.Controls.Add(this.lblFillModel);
+            this.tabPage3.Controls.Add(this.lblFillEdition);
+            this.tabPage3.Controls.Add(this.lblFillBrand);
+            this.tabPage3.Controls.Add(this.lblPrice);
+            this.tabPage3.Controls.Add(this.lblModel);
+            this.tabPage3.Controls.Add(this.lblEdition);
+            this.tabPage3.Controls.Add(this.lblBrand);
             this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Controls.Add(this.btnCarSearch);
             this.tabPage3.Controls.Add(this.cmbCarModel);
@@ -521,6 +543,138 @@ namespace ABC_Car_Traders.view
             this.tabPage3.Size = new System.Drawing.Size(883, 546);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Update Car Details";
+            // 
+            // txtFillPrice
+            // 
+            this.txtFillPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtFillPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFillPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtFillPrice.ForeColor = System.Drawing.Color.White;
+            this.txtFillPrice.Location = new System.Drawing.Point(23, 330);
+            this.txtFillPrice.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtFillPrice.Name = "txtFillPrice";
+            this.txtFillPrice.Size = new System.Drawing.Size(125, 27);
+            this.txtFillPrice.TabIndex = 93;
+            // 
+            // txtFillQty
+            // 
+            this.txtFillQty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtFillQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFillQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtFillQty.ForeColor = System.Drawing.Color.White;
+            this.txtFillQty.Location = new System.Drawing.Point(241, 329);
+            this.txtFillQty.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtFillQty.Name = "txtFillQty";
+            this.txtFillQty.Size = new System.Drawing.Size(125, 27);
+            this.txtFillQty.TabIndex = 93;
+            // 
+            // lblQty
+            // 
+            this.lblQty.AutoSize = true;
+            this.lblQty.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblQty.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblQty.Location = new System.Drawing.Point(241, 306);
+            this.lblQty.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQty.Name = "lblQty";
+            this.lblQty.Size = new System.Drawing.Size(44, 21);
+            this.lblQty.TabIndex = 84;
+            this.lblQty.Text = "QTY";
+            // 
+            // lblFillModel
+            // 
+            this.lblFillModel.AutoSize = true;
+            this.lblFillModel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFillModel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblFillModel.Location = new System.Drawing.Point(471, 230);
+            this.lblFillModel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFillModel.Name = "lblFillModel";
+            this.lblFillModel.Size = new System.Drawing.Size(46, 21);
+            this.lblFillModel.TabIndex = 86;
+            this.lblFillModel.Text = "0000";
+            // 
+            // lblFillEdition
+            // 
+            this.lblFillEdition.AutoSize = true;
+            this.lblFillEdition.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFillEdition.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblFillEdition.Location = new System.Drawing.Point(241, 230);
+            this.lblFillEdition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFillEdition.Name = "lblFillEdition";
+            this.lblFillEdition.Size = new System.Drawing.Size(46, 21);
+            this.lblFillEdition.TabIndex = 87;
+            this.lblFillEdition.Text = "0000";
+            // 
+            // lblFillBrand
+            // 
+            this.lblFillBrand.AutoSize = true;
+            this.lblFillBrand.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFillBrand.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblFillBrand.Location = new System.Drawing.Point(21, 230);
+            this.lblFillBrand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFillBrand.Name = "lblFillBrand";
+            this.lblFillBrand.Size = new System.Drawing.Size(46, 21);
+            this.lblFillBrand.TabIndex = 88;
+            this.lblFillBrand.Text = "0000";
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblPrice.Location = new System.Drawing.Point(23, 306);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(50, 21);
+            this.lblPrice.TabIndex = 89;
+            this.lblPrice.Text = "Price";
+            // 
+            // lblModel
+            // 
+            this.lblModel.AutoSize = true;
+            this.lblModel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblModel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblModel.Location = new System.Drawing.Point(471, 200);
+            this.lblModel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModel.Name = "lblModel";
+            this.lblModel.Size = new System.Drawing.Size(64, 21);
+            this.lblModel.TabIndex = 90;
+            this.lblModel.Text = "Model";
+            // 
+            // lblEdition
+            // 
+            this.lblEdition.AutoSize = true;
+            this.lblEdition.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblEdition.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblEdition.Location = new System.Drawing.Point(241, 200);
+            this.lblEdition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEdition.Name = "lblEdition";
+            this.lblEdition.Size = new System.Drawing.Size(65, 21);
+            this.lblEdition.TabIndex = 91;
+            this.lblEdition.Text = "Edition";
+            // 
+            // lblBrand
+            // 
+            this.lblBrand.AutoSize = true;
+            this.lblBrand.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBrand.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblBrand.Location = new System.Drawing.Point(21, 200);
+            this.lblBrand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBrand.Name = "lblBrand";
+            this.lblBrand.Size = new System.Drawing.Size(59, 21);
+            this.lblBrand.TabIndex = 92;
+            this.lblBrand.Text = "Brand";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label19.Location = new System.Drawing.Point(9, 27);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(175, 22);
+            this.label19.TabIndex = 83;
+            this.label19.Text = "Update Car Details";
             // 
             // btnCarSearch
             // 
@@ -605,17 +759,18 @@ namespace ABC_Car_Traders.view
             this.label18.TabIndex = 78;
             this.label18.Text = "Car Brand";
             // 
-            // label19
+            // btnUpdateCarDetails
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label19.Location = new System.Drawing.Point(9, 27);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(175, 22);
-            this.label19.TabIndex = 83;
-            this.label19.Text = "Update Car Details";
+            this.btnUpdateCarDetails.BackColor = System.Drawing.Color.Lime;
+            this.btnUpdateCarDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateCarDetails.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnUpdateCarDetails.Location = new System.Drawing.Point(655, 480);
+            this.btnUpdateCarDetails.Name = "btnUpdateCarDetails";
+            this.btnUpdateCarDetails.Size = new System.Drawing.Size(201, 40);
+            this.btnUpdateCarDetails.TabIndex = 94;
+            this.btnUpdateCarDetails.Text = "Update Car Details";
+            this.btnUpdateCarDetails.UseVisualStyleBackColor = false;
+            this.btnUpdateCarDetails.Click += new System.EventHandler(this.btnUpdateCarDetails_Click);
             // 
             // PanelCarManage
             // 
@@ -684,5 +839,16 @@ namespace ABC_Car_Traders.view
         private System.Windows.Forms.ComboBox cmbCarBrand;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtFillPrice;
+        private System.Windows.Forms.TextBox txtFillQty;
+        private System.Windows.Forms.Label lblQty;
+        private System.Windows.Forms.Label lblFillModel;
+        private System.Windows.Forms.Label lblFillEdition;
+        private System.Windows.Forms.Label lblFillBrand;
+        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblModel;
+        private System.Windows.Forms.Label lblEdition;
+        private System.Windows.Forms.Label lblBrand;
+        private System.Windows.Forms.Button btnUpdateCarDetails;
     }
 }

@@ -96,5 +96,28 @@ namespace ABC_Car_Traders.Repo.impl
             dbConnection.CloseConnection();
             return carDetails;
         }
+
+
+       // this function use to update car details
+        public bool UpdateCarDetails(int car_id, double newPrice, int new_Qty)
+        {
+            bool isSuccess;
+            try
+            {
+                DBConnector dbConnection = new DBConnector();
+                dbConnection.OpenConnection();
+                command = new MySqlCommand("UPDATE car SET Quantity = '" + new_Qty + "', Price = '" + newPrice + "' WHERE CarId = " + car_id + ";", dbConnection.conn);
+                command.ExecuteNonQuery();
+                dbConnection.CloseConnection();
+                isSuccess = true;
+
+            }
+            catch (Exception)
+            {
+
+                isSuccess = false;
+            }        
+            return isSuccess;
+        }
     }
 }

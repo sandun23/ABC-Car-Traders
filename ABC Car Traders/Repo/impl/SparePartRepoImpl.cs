@@ -82,5 +82,26 @@ namespace ABC_Car_Traders.Repo.impl
             dbConnection.CloseConnection();
             return sparePartList;
         }
+
+        public bool UpdateSparePartDetails(int spare_part_id, double newPrice, int new_Qty)
+        {
+            bool isSuccess;
+            try
+            {
+                DBConnector dbConnection = new DBConnector();
+                dbConnection.OpenConnection();
+                command = new MySqlCommand("UPDATE spare_part SET Quantity = '" + new_Qty + "', Price = '" + newPrice + "' WHERE SparePartId = " + spare_part_id + ";", dbConnection.conn);
+                command.ExecuteNonQuery();
+                dbConnection.CloseConnection();
+                isSuccess = true;
+
+            }
+            catch (Exception)
+            {
+
+                isSuccess = false;
+            }
+            return isSuccess;
+        }
     }
 }

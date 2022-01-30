@@ -14,5 +14,7 @@ namespace ABC_Car_Traders.Repo
         List<SparePart> FilterSparePartList(string filterString);
 
         SparePart FilterSparePartListCustomer(string spareName, string sparebrand);
+
+        bool UpdateSparePartDetails(int spare_part_id, double newPrice, int new_Qty);
     }
 }

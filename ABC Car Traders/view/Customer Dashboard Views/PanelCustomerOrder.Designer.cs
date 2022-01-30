@@ -50,9 +50,11 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.cmbCarBrand = new System.Windows.Forms.ComboBox();
             this.lblFillPrice = new System.Windows.Forms.Label();
             this.lblFillTotal = new System.Windows.Forms.Label();
+            this.lblFillModel = new System.Windows.Forms.Label();
             this.lblFillEdition = new System.Windows.Forms.Label();
             this.lblFillBrand = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
+            this.lblModel = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblEdition = new System.Windows.Forms.Label();
             this.lblBrand = new System.Windows.Forms.Label();
@@ -87,9 +89,11 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.panel1.Controls.Add(this.cmbCarBrand);
             this.panel1.Controls.Add(this.lblFillPrice);
             this.panel1.Controls.Add(this.lblFillTotal);
+            this.panel1.Controls.Add(this.lblFillModel);
             this.panel1.Controls.Add(this.lblFillEdition);
             this.panel1.Controls.Add(this.lblFillBrand);
             this.panel1.Controls.Add(this.lblPrice);
+            this.panel1.Controls.Add(this.lblModel);
             this.panel1.Controls.Add(this.lblTotal);
             this.panel1.Controls.Add(this.lblEdition);
             this.panel1.Controls.Add(this.lblBrand);
@@ -207,7 +211,6 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.cmbCarModel.Name = "cmbCarModel";
             this.cmbCarModel.Size = new System.Drawing.Size(170, 28);
             this.cmbCarModel.TabIndex = 70;
-            this.cmbCarModel.SelectedIndexChanged += new System.EventHandler(this.cmbCarModel_SelectedIndexChanged);
             // 
             // cmbCarEdition
             // 
@@ -219,7 +222,6 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.cmbCarEdition.Name = "cmbCarEdition";
             this.cmbCarEdition.Size = new System.Drawing.Size(170, 28);
             this.cmbCarEdition.TabIndex = 71;
-            this.cmbCarEdition.SelectedIndexChanged += new System.EventHandler(this.cmbCarEdition_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -244,7 +246,6 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.label2.Size = new System.Drawing.Size(100, 21);
             this.label2.TabIndex = 63;
             this.label2.Text = "Car Model";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // cmbSparePartName
             // 
@@ -280,7 +281,6 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.label1.Size = new System.Drawing.Size(101, 21);
             this.label1.TabIndex = 65;
             this.label1.Text = "Car Edition";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -304,7 +304,6 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.cmbCarBrand.Name = "cmbCarBrand";
             this.cmbCarBrand.Size = new System.Drawing.Size(170, 28);
             this.cmbCarBrand.TabIndex = 73;
-            this.cmbCarBrand.SelectedIndexChanged += new System.EventHandler(this.cmbCarBrand_SelectedIndexChanged);
             // 
             // lblFillPrice
             // 
@@ -323,12 +322,24 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.lblFillTotal.AutoSize = true;
             this.lblFillTotal.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblFillTotal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblFillTotal.Location = new System.Drawing.Point(438, 930);
+            this.lblFillTotal.Location = new System.Drawing.Point(458, 918);
             this.lblFillTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFillTotal.Name = "lblFillTotal";
             this.lblFillTotal.Size = new System.Drawing.Size(46, 21);
             this.lblFillTotal.TabIndex = 67;
             this.lblFillTotal.Text = "0000";
+            // 
+            // lblFillModel
+            // 
+            this.lblFillModel.AutoSize = true;
+            this.lblFillModel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFillModel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblFillModel.Location = new System.Drawing.Point(440, 309);
+            this.lblFillModel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFillModel.Name = "lblFillModel";
+            this.lblFillModel.Size = new System.Drawing.Size(46, 21);
+            this.lblFillModel.TabIndex = 67;
+            this.lblFillModel.Text = "0000";
             // 
             // lblFillEdition
             // 
@@ -366,12 +377,24 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.lblPrice.TabIndex = 67;
             this.lblPrice.Text = "Price";
             // 
+            // lblModel
+            // 
+            this.lblModel.AutoSize = true;
+            this.lblModel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblModel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblModel.Location = new System.Drawing.Point(440, 279);
+            this.lblModel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblModel.Name = "lblModel";
+            this.lblModel.Size = new System.Drawing.Size(64, 21);
+            this.lblModel.TabIndex = 67;
+            this.lblModel.Text = "Model";
+            // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblTotal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTotal.Location = new System.Drawing.Point(384, 930);
+            this.lblTotal.Location = new System.Drawing.Point(404, 918);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(51, 21);
@@ -413,7 +436,6 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
             this.label7.Size = new System.Drawing.Size(95, 21);
             this.label7.TabIndex = 68;
             this.label7.Text = "Car Brand";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label16
             // 
@@ -489,5 +511,7 @@ namespace ABC_Car_Traders.view.Customer_Dashboard_Views
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Label lblFillModel;
+        private System.Windows.Forms.Label lblModel;
     }
 }

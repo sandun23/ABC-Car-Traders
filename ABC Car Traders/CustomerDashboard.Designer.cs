@@ -31,7 +31,6 @@ namespace ABC_Car_Traders
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerDashboard));
             this.PnlCustomerFormLoader = new System.Windows.Forms.Panel();
-            this.BtnClose = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlCustomerNav = new System.Windows.Forms.Panel();
@@ -59,30 +58,14 @@ namespace ABC_Car_Traders
             this.PnlCustomerFormLoader.Size = new System.Drawing.Size(891, 580);
             this.PnlCustomerFormLoader.TabIndex = 7;
             // 
-            // BtnClose
-            // 
-            this.BtnClose.BackColor = System.Drawing.Color.Transparent;
-            this.BtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnClose.FlatAppearance.BorderSize = 0;
-            this.BtnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnClose.ForeColor = System.Drawing.Color.Red;
-            this.BtnClose.Location = new System.Drawing.Point(1038, 12);
-            this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(27, 30);
-            this.BtnClose.TabIndex = 6;
-            this.BtnClose.Text = "X";
-            this.BtnClose.UseVisualStyleBackColor = false;
-            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lblTitle.Location = new System.Drawing.Point(209, 22);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(66, 29);
+            this.lblTitle.Size = new System.Drawing.Size(56, 27);
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "Title";
             // 
@@ -118,7 +101,7 @@ namespace ABC_Car_Traders
             this.btnCustomerLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnCustomerLogout.FlatAppearance.BorderSize = 0;
             this.btnCustomerLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomerLogout.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCustomerLogout.Font = new System.Drawing.Font("Code39AzaleaNarrow1", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCustomerLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCustomerLogout.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnCustomerLogout.Location = new System.Drawing.Point(0, 608);
@@ -135,7 +118,7 @@ namespace ABC_Car_Traders
             this.btnCustomerProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnCustomerProfile.FlatAppearance.BorderSize = 0;
             this.btnCustomerProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomerProfile.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCustomerProfile.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCustomerProfile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCustomerProfile.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnCustomerProfile.Location = new System.Drawing.Point(0, 336);
@@ -152,7 +135,7 @@ namespace ABC_Car_Traders
             this.btnCustomerOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnCustomerOrder.FlatAppearance.BorderSize = 0;
             this.btnCustomerOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomerOrder.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCustomerOrder.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCustomerOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCustomerOrder.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnCustomerOrder.Location = new System.Drawing.Point(0, 288);
@@ -169,7 +152,7 @@ namespace ABC_Car_Traders
             this.btnCustomerSparePartDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnCustomerSparePartDetails.FlatAppearance.BorderSize = 0;
             this.btnCustomerSparePartDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomerSparePartDetails.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCustomerSparePartDetails.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCustomerSparePartDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCustomerSparePartDetails.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnCustomerSparePartDetails.Location = new System.Drawing.Point(0, 240);
@@ -186,7 +169,7 @@ namespace ABC_Car_Traders
             this.btnCustomerCarDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnCustomerCarDetails.FlatAppearance.BorderSize = 0;
             this.btnCustomerCarDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomerCarDetails.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCustomerCarDetails.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCustomerCarDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCustomerCarDetails.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnCustomerCarDetails.Location = new System.Drawing.Point(0, 192);
@@ -204,7 +187,7 @@ namespace ABC_Car_Traders
             this.btnCustomerDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCustomerDashboard.FlatAppearance.BorderSize = 0;
             this.btnCustomerDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomerDashboard.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCustomerDashboard.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCustomerDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCustomerDashboard.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnCustomerDashboard.Location = new System.Drawing.Point(0, 144);
@@ -261,7 +244,6 @@ namespace ABC_Car_Traders
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1077, 650);
             this.Controls.Add(this.PnlCustomerFormLoader);
-            this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -281,7 +263,6 @@ namespace ABC_Car_Traders
         #endregion
 
         private System.Windows.Forms.Panel PnlCustomerFormLoader;
-        private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlCustomerNav;
